@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Virtual Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+        <h1> Create Your Valentine's Card </h1>
+<label for="themeSelect">Choose a Theme:</label>
+<select id="themeSelect" onchange="changeTheme()">
+    <option value="romantic">Romantic</option>
+    <option value="cute">Cute</option>
+    <option value="elegant">Elegant</option>
+    <option value="floral">Floral</option>
+    <option value="classic">Classic</option>
+</select>
+<br><br> 
+<div id="card" class="card">
+            <img id="heartImage" src="https://cdn-icons-png.flaticon.com/128/15736/15736393.png" alt="Heart" class="heart">
+            <p id="quote">"Love is in the air!"</p>
+            <p id="message">Your message will appear here...</p>
+        </div>
+
+        <textarea id="userMessage" placeholder="Write a sweet message..."></textarea>
+        <button onclick="updateCard()">Generate Card</button>
+        <button onclick="downloadCard()">Download Card</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
